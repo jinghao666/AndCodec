@@ -1,0 +1,27 @@
+11-14 14:29:55.834: I/AndCodec(5983): supported preview size: 1280x480
+11-14 14:29:55.834: I/AndCodec(5983): supported preview size: 800x432
+11-14 14:29:55.834: I/AndCodec(5983): supported preview size: 720x480
+11-14 14:29:55.834: I/AndCodec(5983): supported preview size: 576x320
+11-14 14:29:55.834: I/AndCodec(5983): supported preview size: 432x288
+11-14 14:29:55.844: I/AndCodec(5983): supported preview size: 352x240
+11-14 14:29:55.844: I/AndCodec(5983): supported preview size: 240x144
+11-14 14:29:55.844: I/AndCodec(5983): setMeasuredDimension 540x960
+11-14 14:29:55.864: I/AndCodec(5983): onLayout() 0.0.540.960
+11-14 14:29:55.874: I/AndCodec(5983): surfaceCreated()
+11-14 14:29:55.874: I/AndCodec(5983): surfaceChanged()
+11-14 14:29:55.884: I/AndCodec(5983): picture format 256, size 640x480
+11-14 14:29:55.884: I/AndCodec(5983): preview format 17, size 640x480
+11-14 14:29:55.884: I/AndCodec(5983): supported picture format: 256
+11-14 14:29:55.894: I/AndCodec(5983): supported picture size: 2592x1944
+11-14 14:29:55.894: I/AndCodec(5983): supported picture size: 2048x1536
+11-14 14:29:55.894: I/AndCodec(5983): supported picture size: 1920x1088
+11-14 14:29:55.894: I/AndCodec(5983): supported picture size: 1600x1200
+11-14 14:29:55.894: I/AndCodec(5983): supported picture size: 1280x768
+11-14 14:29:55.894: I/AndCodec(5983): supported picture size: 1280x720
+11-14 14:29:55.894: I/AndCodec(5983): supported picture size: 1024x768
+11-14 14:29:55.894: I/AndCodec(5983): supported picture size: 800x600
+11-14 14:29:55.894: I/AndCodec(5983): supported picture size: 800x480
+11-14 14:29:55.894: I/AndCodec(5983): supported picture size: 640x480
+11-14 14:29:55.894: I/AndCodec(5983): supported picture size: 352x288
+11-14 14:29:55.894: I/AndCodec(5983): supported picture size: 320x240
+11-14 14:29:55.894: I/AndCodec(5983): supported picture size: 176x144

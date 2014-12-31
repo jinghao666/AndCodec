@@ -1,0 +1,87 @@
+LOCAL_PATH := $(call my-dir)
+BUILD_NEON		:= 1
+#BUILD_FF_ENC	:= 1
+BUILD_JNI_LOAD	:= 1
+
+FFMPEG_LIB_PATH	:= $(LOCAL_PATH)/ffmpeg/lib/$(TARGET_ARCH_ABI)
+X264_LIB_PATH 	:= $(LOCAL_PATH)/x264/lib/$(TARGET_ARCH_ABI)
+ANDROID_PATH	:= ../../../../../Software/MSYS_x86/home/zodiac/ffmpeg-0.11.2/android-libs
+NDK_PATH		:= ../../../../../Software/android-ndk-r9
+
+include $(CLEAR_VARS)
+LOCAL_MODULE 	:= ffmpeg
+LOCAL_SRC_FILES := ffmpeg/lib/$(TARGET_ARCH_ABI)/libffmpeg.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE 	:= x264
+LOCAL_SRC_FILES := x264/lib/$(TARGET_ARCH_ABI)/libx264.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE			:= andcodec
+LOCAL_C_INCLUDES		:= $(LOCAL_PATH)/x264/include $(LOCAL_PATH)/ffmpeg/include
+LOCAL_SRC_FILES 		:= andsysutil.c andutility.c andstr.c andlog.c andtiming_c.c \
+	andfifobuffer.c andqueue.c andtunables.c andparseconf.c easyencoder.c easydecoder.c
+LOCAL_CFLAGS    		:= -Wall -DANDROID_APP=1
+ifdef BUILD_FF_ENC
+LOCAL_SRC_FILES			+= andffencoder.c
+endif
+ifdef BUILD_JNI_LOAD
+LOCAL_SRC_FILES			+= andc2java_c.c
+LOCAL_CFLAGS    		+= -DC_SIDE_TEST=1
+endif
+LOCAL_STATIC_LIBRARIES 	:= x264 ffmpeg
+LOCAL_LDLIBS 			:= -llog -lz -L$(X264_LIB_PATH) -L$(FFMPEG_LIB_PATH)
+include $(BUILD_SHARED_LIBRARY)
+
+ifeq ($(TARGET_ARCH_ABI),armeabi)
+ifdef BUILD_NEON
+include $(CLEAR_VARS)
+LOCAL_MODULE 	:= x264_neon
+LOCAL_SRC_FILES := x264/lib/$(TARGET_ARCH_ABI)/libx264_neon.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE 	:= ffmpeg_neon
+LOCAL_SRC_FILES := ffmpeg/lib/$(TARGET_ARCH_ABI)/libffmpeg_neon.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE 	:= gcc
+LOCAL_SRC_FILES := $(NDK_PATH)/toolchains/arm-linux-androideabi-4.6/prebuilt/windows/lib/gcc/arm-linux-androideabi/4.6/libgcc.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE 	:= stagefright
+LOCAL_SRC_FILES := $(ANDROID_PATH)/libstagefright.so
+include $(PREBUILT_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE			:= andcodec_neon
+LOCAL_C_INCLUDES		:= $(LOCAL_PATH)/x264/include $(LOCAL_PATH)/ffmpeg/include
+LOCAL_SRC_FILES 		:= andsysutil.c andutility.c andstr.c andlog.c andtiming_c.c \
+	andfifobuffer.c andqueue.c andtunables.c andparseconf.c easyencoder.c easydecoder.c  
+LOCAL_CFLAGS    		:= -Wall -DANDROID_APP=1 -DHAVE_NEON=1
+ifdef BUILD_FF_ENC
+LOCAL_SRC_FILES			+= andffencoder.c
+endif
+ifdef BUILD_JNI_LOAD
+LOCAL_SRC_FILES			+= andc2java_c.c
+LOCAL_CFLAGS    		+= -DC_SIDE_TEST=1
+endif
+LOCAL_STATIC_LIBRARIES 	:= x264_neon ffmpeg_neon gcc gnustl_static stdc++
+LOCAL_SHARED_LIBRARIES 	:= stagefright 
+LOCAL_LDLIBS 			:= -llog -lz -lc -lgcc -lm -ldl -lstdc++ -lmedia -lutils -lstagefright -lbinder -L$(ANDROID_PATH) -L$(X264_LIB_PATH) -L$(FFMPEG_LIB_PATH)
+include $(BUILD_SHARED_LIBRARY)
+endif
+endif
+
+include $(CLEAR_VARS)
+LOCAL_MODULE			:= anddevft
+LOCAL_STATIC_LIBRARIES	:= cpufeatures
+LOCAL_SRC_FILES 		:= andsysutil.c andutility.c andstr.c andlog.c devfeatures.c 
+LOCAL_CFLAGS    		:= -Wall -DANDROID_APP
+LOCAL_LDLIBS 			:= -llog
+include $(BUILD_SHARED_LIBRARY)
+$(call import-module,cpufeatures)

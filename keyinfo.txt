@@ -1,0 +1,13 @@
+andcodec_keystore
+
+password 123456
+
+alias mykey
+password 654321
+year 50
+first and last name Michael.Ma
+organization SE2
+Origanization XOR-MEDIA
+city China
+state Shanghai
+contrycode 021
