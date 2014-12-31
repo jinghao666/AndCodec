@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="select_output_title">选择输出类型</string>
+	<string name="select_output_cancel">取消</string>
+	<string name="default_output_type">图-264</string>
+	<string-array name="output_type">
+		<item>@string/default_output_type</item>
+		<item>图-ts</item>
+		<item>摄-264</item>
+		<item>摄-ts</item>
+		<item>摄-图</item>
+	</string-array>
+	
+	<string name="et_preset_hint">请输入预设值</string>
+	
+	<string name="et_enc_settings_hint">请输入编码选项</string>
+	
+	<string name="edit_enc_in_file_hint">输入编码文件</string>
+	
+    <string name="app_name">安卓编解码套件</string>
+    <string name="hello_world">安卓，你好!</string>
+    <string name="menu_settings">设置</string>
+	
+	<string name="menu_usejava_test">使用Java测试</string>
+	<string name="menu_write_file">写文件</string>
+	<string name="menu_write_size">写帧大小</string>
+	
+	<string name="et_preset_text">high</string>
+	<string name="et_enc_settings_low">preset=ultrafast,profile=baseline</string>
+	<string name="et_enc_settings_high">preset=veryfast,profile=high</string>
+	<string name="et_enc_settings_text">quality=50</string>
+	<string name="et_enc_in_file_text">/test/in640.nv21</string>
+	<string name="et_enc_out_file_text">/test/out.h264</string>
+	<string name="et_enc_out_dump_text">/test/out.dump</string>
+	<string name="et_enc_out_ts_text">/test/out.ts</string>
+	<string name="et_dec_in_file_text">/test/in.dump</string>
+	<string name="et_dec_out_file_text">/test/out.565</string>
+	<string name="et_width_text">640</string>
+	<string name="et_height_text">480</string>
+	<string name="et_in_fmt_text">2</string>
+	<string name="et_out_fmt_text">0</string>
+	<string name="et_frames_text">200</string>
+	
+	<string name="tv_preset_text">预设</string>
+	<string name="tv_enc_settings_text">编码器 设置</string>
+	<string name="tv_home_folder_text">文件名-系统目录 或 文件全路径-外部存储</string>
+	<string name="tv_enc_in_file_text">输入图片文件</string>
+	<string name="tv_enc_out_file_text">输出h264文件</string>
+	<string name="tv_dec_in_file_text">输入带size的h264编码文件</string>
+	<string name="tv_dec_out_file_text">输出图片文件</string>
+	<string name="tv_width">宽</string>
+	<string name="tv_height">高</string>
+	<string name="tv_in_info_text">格式(0-RGB565LE,1-BGR24,2-nv21,3-yuv420p)</string>
+	<string name="tv_frames_text">帧数</string>
+	<string name="tv_in_fmt_text">格式</string>
+	<string name="tv_out_fmt_text">格式</string>
+	<string name="tv_enc_result_text">编码 输出信息</string>
+	<string name="tv_dec_result_text">解码 输出信息</string>
+	
+	<string name="cb_write_file_text">写</string>
+	<string name="cb_write_size_text">大小</string>
+	<string name="btn_mode_text">模式</string>
+	<string name="btn_enc_run_text">运行</string>
+	<string name="btn_cam_size_text">尺寸</string>
+	<string name="btn_cam_record_start">开始</string>
+	<string name="btn_cam_record_stop">结束</string>
+	<string name="btn_decode_text">解码</string>
+	<string name="btn_testdec_text">测试解码</string>
+	<string name="btn_jump2enc_text">去编码</string>
+	<string name="btn_jump2manual_text">去调试</string>
+	<string name="btn_jump2dec_text">去解码</string>
+	
+	<string name="dec_prog_dlg_msg">解码中...</string>
+	<string name="enc_prog_dlg_msg">编码中...</string>
+	<string name="select_cam_resolution">选择摄像头分辨率</string>
+	<string name="select_cam_resolution_cancel">取消</string>
+	<string name="switch_cam_resolution_bad">摄像头该分辨率不支持</string>
+	
+	<string name="switch_cam">切换摄像头</string>
+	<string name="camera_alert">设备只有1个摄像头!</string>
+	
+	<string name="btn_man_run_dec">解码</string>
+	<string name="btn_man_run_dec_stop">停止</string>
+	<string name="tv_man_enc">编码</string>
+	<string name="tv_man_dec">解码</string>
+	<string name="btn_man_open">打开</string>
+	<string name="btn_man_add">添加</string>
+	<string name="btn_man_get">获取</string>
+	<string name="btn_man_close">关闭</string>
+	<string name="tv_man_info">信息</string>
+	<string name="tv_man_in_file_text">输入文件</string>
+	
+</resources>

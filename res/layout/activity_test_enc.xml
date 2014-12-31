@@ -1,0 +1,164 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TestEnc" >
+
+	<TextView
+		android:id="@+id/tv_home_folder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/tv_home_folder_text" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/tv_enc_in_file_text" />
+	<AutoCompleteTextView
+		android:id="@+id/edit_enc_in_file"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:singleLine="true"
+		android:textColor="#000000"
+		android:hint="@string/edit_enc_in_file_hint"
+        android:text="@string/et_enc_in_file_text" /><!---->
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_enc_out_file_text" />
+	<EditText
+		android:id="@+id/edit_enc_out_file"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:singleLine="true"
+        android:text="@string/et_enc_out_file_text" />
+	
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_in_info_text" />
+	<LinearLayout  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal" > 
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tv_width" />
+		<EditText
+			android:id="@+id/edit_width"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/et_width_text"
+			android:numeric="integer" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tv_height" />
+		<EditText
+			android:id="@+id/edit_height"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/et_height_text"
+			android:numeric="integer" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tv_in_fmt_text" />
+		<EditText
+			android:id="@+id/edit_in_fmt"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/et_in_fmt_text"
+			android:numeric="integer" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tv_frames_text" />
+		<EditText
+			android:id="@+id/edit_frames"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/et_frames_text"
+			android:numeric="integer" />
+	</LinearLayout>
+	
+	<LinearLayout  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal" > 
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tv_preset_text" />
+		<AutoCompleteTextView
+			android:id="@+id/edit_preset"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:textColor="#000000"
+			android:hint="@string/et_preset_hint"
+			android:text="@string/et_preset_text" />
+		<CheckBox
+			android:id="@+id/cb_write_file"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/cb_write_file_text"
+			android:checked="true" />
+		<CheckBox
+			android:id="@+id/cb_write_size"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/cb_write_size_text" />
+	</LinearLayout>
+	
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/tv_enc_settings_text" />
+	<AutoCompleteTextView
+		android:id="@+id/edit_enc_settings"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textColor="#000000"
+		android:hint="@string/et_enc_settings_hint"
+		android:text="@string/et_enc_settings_text"
+		android:singleLine="true" />
+		
+	<LinearLayout  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal" > 
+		<Button
+			android:id="@+id/btn_mode"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/default_output_type" />
+		<ImageButton
+			android:id="@+id/btn_cam_size"
+			android:src="@drawable/ic_cam_res"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/btn_cam_size_text" />
+		<Button
+			android:id="@+id/btn_enc_run"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/btn_enc_run_text" />
+		<Button
+			android:id="@+id/btn_jump2dec"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/btn_jump2dec_text" />
+	</LinearLayout>	
+	
+	<TextView
+		android:id="@+id/tv_enc_result"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/tv_enc_result_text" />
+
+</LinearLayout>

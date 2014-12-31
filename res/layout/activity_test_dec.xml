@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TestDec" >
+
+	<TextView
+		android:id="@+id/tv_dec_home_folder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/tv_home_folder_text" />
+	<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/tv_dec_in_file_text" />
+	<EditText
+		android:id="@+id/edit_dec_in_file"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:singleLine="true"
+        android:text="@string/et_dec_in_file_text" />
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_dec_out_file_text" />
+	<EditText
+		android:id="@+id/edit_dec_out_file"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:singleLine="true"
+        android:text="@string/et_dec_out_file_text" />
+		
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_in_info_text" />
+	<LinearLayout  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal" > 
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tv_width" />
+		<EditText
+			android:id="@+id/edit_width"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/et_width_text"
+			android:numeric="integer" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tv_height" />
+		<EditText
+			android:id="@+id/edit_height"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/et_height_text"
+			android:numeric="integer" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tv_out_fmt_text" />
+		<EditText
+			android:id="@+id/edit_out_fmt"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/et_out_fmt_text"
+			android:numeric="integer" />
+	</LinearLayout>
+	
+	<LinearLayout  
+		android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal" > 
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/tv_frames_text" />
+		<EditText
+				android:id="@+id/edit_frames"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/et_frames_text"
+				android:numeric="integer" />
+		<CheckBox
+				android:id="@+id/cb_write_file"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/cb_write_file_text" />
+	</LinearLayout>	
+		
+	<LinearLayout  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal" > 
+		<Button
+			android:id="@+id/btn_decode"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/btn_decode_text" />
+		<ImageButton
+			android:id="@+id/btn_dec_res"
+			android:src="@drawable/ic_cam_res"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/btn_cam_size_text" />
+		<Button
+			android:id="@+id/btn_jump2manual"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/btn_jump2manual_text" />
+	</LinearLayout>	
+	
+	<TextView
+		android:id="@+id/tv_dec_result"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/tv_dec_result_text" />
+
+</LinearLayout>

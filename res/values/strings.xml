@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="select_output_title">Select encoder type</string>
+	<string name="select_output_cancel">Cancel</string>
+	<string name="default_output_type">raw->h264</string>
+	<string-array name="output_type">
+		<item>@string/default_output_type</item>
+		<item>raw->ts</item>
+		<item>cam->h264</item>
+		<item>cam->ts</item>
+		<item>cam->nv21</item>
+	</string-array>
+	
+	<string name="et_preset_hint">Please input preset</string>
+	<string-array name="preset_disp">
+		<item>low</item>
+		<item>high</item>
+		<item>smartquality</item>
+		<item>nolatency</item>
+		<item>static</item>
+	</string-array>
+	
+	<string name="et_enc_settings_hint">Please input enc_settings</string>
+	<string-array name="enc_settings_disp">
+		<item>quality=</item>
+		<item>gop_size=</item>
+	</string-array>
+	
+	
+	<string name="edit_enc_in_file_hint">input file to encode</string>
+	<string-array name="enc_in_file">
+		<item>/test/in.nv21</item>
+		<item>/test/in.yuv</item>
+		<item>/test/in320.nv21</item>
+		<item>/test/in640.nv21</item>
+		<item>/test/in1280.nv21</item>
+	</string-array>
+	
+
+    <string name="app_name">AndCodec</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+	
+	<string name="menu_usejava_test">use Java test</string>
+	<string name="menu_write_file">write file</string>
+	<string name="menu_write_size">write size</string>
+	
+	
+	<string name="et_preset_text">high</string>
+	<string name="et_enc_settings_low">preset=ultrafast,profile=baseline</string>
+	<string name="et_enc_settings_high">preset=veryfast,profile=high</string>
+	<string name="et_enc_settings_text">quality=50</string>
+	<string name="et_enc_in_file_text">/test/in320.nv21</string>
+	<string name="et_enc_out_file_text">/test/out.h264</string>
+	<string name="et_enc_out_dump_text">/test/out.dump</string>
+	<string name="et_enc_out_ts_text">/test/out.ts</string>
+	<string name="et_dec_in_file_text">/test/in.dump</string>
+	<string name="et_dec_out_file_text">/test/out.565</string>
+	<string name="et_width_text">320</string>
+	<string name="et_height_text">240</string>
+	<string name="et_in_fmt_text">2</string>
+	<string name="et_out_fmt_text">0</string>
+	<string name="et_frames_text">200</string>
+	
+	<string name="tv_preset_text">profile</string>
+	<string name="tv_enc_settings_text">encoder settings</string>
+	<string name="tv_home_folder_text">filename for system storage or fullpath for external storage</string>
+	<string name="tv_enc_in_file_text">input pic</string>
+	<string name="tv_enc_out_file_text">output dump</string>
+	<string name="tv_dec_in_file_text">input dump</string>
+	<string name="tv_dec_out_file_text">output pic</string>
+	<string name="tv_width">w</string>
+	<string name="tv_height">h</string>
+	<string name="tv_in_info_text">fmt(0-RGB565LE,1-BGR24,2-nv21,3-yuv420p)</string>
+	<string name="tv_frames_text">frames</string>
+	<string name="tv_in_fmt_text">in_fmt</string>
+	<string name="tv_out_fmt_text">out_fmt</string>
+	<string name="tv_enc_result_text">encode info</string>
+	<string name="tv_dec_result_text">decode info</string>
+	
+	<string name="cb_write_file_text">f</string>
+	<string name="cb_write_size_text">s</string>
+	<string name="btn_mode_text">Mode</string>
+	<string name="btn_enc_run_text">Run</string>
+	<string name="btn_cam_size_text">Size</string>
+	<string name="btn_cam_record_start">start</string>
+	<string name="btn_cam_record_stop">stop</string>
+	<string name="btn_decode_text">Decode</string>
+	<string name="btn_testdec_text">test dec</string>
+	<string name="btn_jump2enc_text">ToEnc</string>
+	<string name="btn_jump2manual_text">ToMan</string>
+	<string name="btn_jump2dec_text">ToDec</string>
+	
+	<string name="dec_prog_dlg_msg">Decoding...</string>
+	<string name="enc_prog_dlg_msg">Encoding...</string>
+	<string name="select_cam_resolution">Select Camera resolution</string>
+	<string name="select_cam_resolution_cancel">Cancel</string>
+	<string name="switch_cam_resolution_bad">Camera preview size is not supported</string>
+	
+	<string name="switch_cam">Switch Camera</string>
+	<string name="camera_alert">Device has only one camera!</string>
+	
+	<string name="tv_man_enc">encode</string>
+	<string name="btn_man_run_dec_stop">stop</string>
+	<string name="tv_man_dec">decode</string>
+	<string name="btn_man_run_dec">dec</string>
+	<string name="btn_man_open">open</string>
+	<string name="btn_man_add">add</string>
+	<string name="btn_man_get">get</string>
+	<string name="btn_man_close">close</string>
+	<string name="tv_man_info">info</string>
+	<string name="tv_man_in_file_text">input file</string>
+	
+</resources>

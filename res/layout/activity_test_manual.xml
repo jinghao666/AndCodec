@@ -1,0 +1,148 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Manual" >
+		
+	<LinearLayout	
+		android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal" > 
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tv_width" />
+		<EditText
+			android:id="@+id/edit_man_width"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/et_width_text"
+			android:numeric="integer" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tv_height" />
+		<EditText
+			android:id="@+id/edit_man_height"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/et_height_text"
+			android:numeric="integer" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tv_in_fmt_text" />
+		<EditText
+			android:id="@+id/edit_man_out_fmt"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/et_out_fmt_text"
+			android:numeric="integer" />
+	</LinearLayout>	
+	
+	<LinearLayout	
+		android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal" > 
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true"
+			android:text="@string/tv_man_in_file_text" />
+		<EditText
+				android:id="@+id/et_man_filename"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+			android:text="@string/et_enc_out_dump_text" />
+	</LinearLayout>	
+			
+	<LinearLayout  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal" > 
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tv_man_enc" />
+		<Button
+			android:id="@+id/btn_man_open_enc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/btn_man_open" />
+		<Button
+			android:id="@+id/btn_man_add_enc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/btn_man_add" />
+		<Button
+			android:id="@+id/btn_man_get_enc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/btn_man_get" />
+	</LinearLayout>	
+	
+	<LinearLayout  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal" > 
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tv_man_dec" />
+		<Button
+			android:id="@+id/btn_man_open_dec"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/btn_man_open" />
+		<Button
+			android:id="@+id/btn_man_add_dec"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/btn_man_add" />
+		<Button
+			android:id="@+id/btn_man_get_dec"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/btn_man_get" />
+		<Button
+			android:id="@+id/btn_man_run_dec"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/btn_man_run_dec" />
+	</LinearLayout>	
+	
+	<LinearLayout	
+		android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal" > 
+		<ImageButton
+			android:id="@+id/btn_man_res"
+			android:src="@drawable/ic_cam_res"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<ImageButton
+			android:id="@+id/btn_man_disp"
+			android:src="@drawable/ic_fulldisp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />	
+		<Button
+			android:id="@+id/btn_jump2enc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/btn_jump2enc_text" />
+	</LinearLayout>
+	
+	<TextView
+		android:id="@+id/tv_man_info"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/tv_man_info" />
+	<SurfaceView
+		android:id="@+id/sv_disp"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" />
+		
+</LinearLayout>
