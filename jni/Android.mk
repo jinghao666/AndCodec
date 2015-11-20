@@ -21,7 +21,7 @@ LOCAL_SRC_FILES := x264/lib/$(TARGET_ARCH_ABI)/libfdk-aac.a
 include $(PREBUILT_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE			:= andcodec
+LOCAL_MODULE			:= andcodec_neon
 LOCAL_C_INCLUDES		:= $(LOCAL_PATH)/x264/include $(LOCAL_PATH)/ffmpeg/include
 LOCAL_SRC_FILES 		:= andsysutil.c andutility.c andstr.c andlog.c andtiming_c.c \
 	andfifobuffer.c andqueue.c andtunables.c andparseconf.c easyencoder.c easydecoder.c
